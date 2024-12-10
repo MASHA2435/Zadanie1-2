@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        }
+        table {
+            width: 80%; 
+            margin: auto; 
+            border-collapse: collapse; 
+        }
+        nav a {
+            color: black; 
+            text-decoration: none;
+            margin: 0 10px; 
+        }
+        nav a:hover {
+            color: gray; 
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px; 
+            margin-top: 20px; 
+            flex-wrap: wrap; 
+        }
+        .gallery img {
+            width: 100px; 
+            height: 100px; 
+            cursor: pointer; 
+            object-fit: cover; 
+        }
+        .main-image {
+            width: 500px;
+            height: 500px; 
+            margin-bottom: 20px; 
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+    <table border="0" align="center" cellspacing="0" border="1">
+        <tr>
+            <td colspan="2" align="center">
+                <h1>Компания «Рога и копыта»</h1>
+                <h2>Мы работаем для вас.</h2>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <nav>
+                    <a href="index.html"><b> | Главная | </b></a> 
+                    <a href="about.html"><b> О компании </b> |</a>
+                    <a href="employee.html"><b> Наши сотрудники </b> |</a>
+                    <a href="education.html"><b> Образование </b> |</a>
+                    <a href="gallery.html"><b> Галерея </b>|</a>
+                </nav>
+            </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">
+                <img class="main-image" src="фотки/1.jpg" alt="Основное изображение">
+                <div class="gallery">
+                    <img src="фотки/1.jpg" alt="Изображение 1" onclick="changeImage('фотки\\1.jpg')">
+                    <img src="фотки/2.jpg" alt="Изображение 2" onclick="changeImage('фотки\\2.jpg')">
+                    <img src="фотки/3.jpg" alt="Изображение 3" onclick="changeImage('фотки\\3.jpg')">
+                    <img src="фотки/4.png" alt="Изображение 4" onclick="changeImage('фотки\\4.png')">
+                    <img src="фотки/5.jpg" alt="Изображение 5" onclick="changeImage('фотки\\5.jpg')">
+                </div>
+                <script>
+                    function changeImage(src) {
+                        document.querySelector('.main-image').src = src;
+                    }
+                </script>
+            </td>
+        </tr>  
+        <tr>
+            <td>
+                <footer>
+                    <a href="#top">Наверх</a>
+                    <p><i>© Бендер и компания</i></p>
+                </footer>
+            </td>
+        </tr>  
+    </table>
+</body>
+</html>
